@@ -1,131 +1,73 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import {Image, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import {Provider} from "react-redux";
+import {persistor, store} from "./srс/redux/store";
+import {PersistGate} from "redux-persist/integration/react";
+import WelcomeScreen from "./srс/navigation/WelcomeScreen";
+import MainTabNavigator from "./srс/navigation/MainTabNavigator";
+import WelcomeScreen2 from "./srс/navigation/WelcomeScreen2";
+import WelcomeScreen4 from "./srс/navigation/WelcomeScreen4";
+import WelcomeScreen5 from "./srс/navigation/WelcomeScreen5";
+import WelcomeScreen3 from "./srс/navigation/WelcomeScreen3";
+import SearchResultScreen from "./srс/screens/SearchResultScreen";
+import SearchResultLoadindScreen from "./srс/screens/SearchResultLoadingScreen";
+import QuestionsScreen from "./srс/screens/QuestionsScreen";
+import QuizResultScreen from "./srс/screens/QuizResultScreen";
+import LocalCuisineMoreScreen from "./srс/screens/LocalCuisineMoreScreen";
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+const Stack = createStackNavigator();
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
+function CustomHeaderLeft() {
+    const navigation = useNavigation();
+
+    return (
+        <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            style={{ flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}
+        >
+        </TouchableOpacity>
+    );
 }
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+const customPic = () => (
+    <Image
+        source={require('./srс/assets/img/headerP.png')}
+        style={{ width: 250, resizeMode: 'contain' }}
+    />
+)
 
-  /*
-   * To keep the template simple and small we're adding padding to prevent view
-   * from rendering under the System UI.
-   * For bigger apps the reccomendation is to use `react-native-safe-area-context`:
-   * https://github.com/AppAndFlow/react-native-safe-area-context
-   *
-   * You can read more about it here:
-   * https://github.com/react-native-community/discussions-and-proposals/discussions/827
-   */
-  const safePadding = '5%';
+export default function App() {
+    return (
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <NavigationContainer>
+                    <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: '#0C0C0C', height: 180, },
+                        headerLeft: CustomHeaderLeft,
+                        headerTitle: customPic
+                    }}>
+                        {/*<Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />*/}
+                        <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
+                        <Stack.Screen name="Welcome2" component={WelcomeScreen2} options={{ headerShown: false }} />
+                        <Stack.Screen name="Welcome3" component={WelcomeScreen3} options={{ headerShown: false }} />
+                        <Stack.Screen name="Welcome4" component={WelcomeScreen4} options={{ headerShown: false }} />
+                        <Stack.Screen name="Welcome5" component={WelcomeScreen5} options={{ headerShown: false }} />
+                        <Stack.Screen name="Main" component={MainTabNavigator} options={{ headerShown: false }} />
 
-  return (
-    <View style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        style={backgroundStyle}>
-        <View style={{paddingRight: safePadding}}>
-          <Header/>
-        </View>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            paddingHorizontal: safePadding,
-            paddingBottom: safePadding,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </View>
-  );
+                        <Stack.Screen name="SearchResultLoadind" component={SearchResultLoadindScreen}  />
+                        <Stack.Screen name="SearchResult" component={SearchResultScreen}  />
+
+                        <Stack.Screen name="Questions" component={QuestionsScreen}  />
+                        <Stack.Screen name="QuizResult" component={QuizResultScreen}  />
+
+                        <Stack.Screen name="LocalCuisineMore" component={LocalCuisineMoreScreen}  />
+                    </Stack.Navigator>
+                </NavigationContainer>
+          </PersistGate>
+         </Provider>
+    );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
