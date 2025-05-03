@@ -6,7 +6,7 @@ const WelcomeScreen4 = ({ navigation }) => (
     <View style={styles.container}>
         <View style={styles.imageContainer}>
             <Image
-                source={{ uri: 'https://s3-alpha-sig.figma.com/img/8c67/12a8/6a4ededc0b4126b0925bcd1c90f0fa6e?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Bi3Aa17wkRTv1PbR1a0o1-ztI1251cd9LTw9xaN1y9zIcp9wrVJ4WLZU8Qm6PlDUUVR~0j2CHh5h92gqkP2UduMzxAvZDjbZj6A-B9uEBLV8YuL9Lahj6vkPAKMyCj2OTpBtXAjGoFauGefET7PWEyinthSqn~FrhiUX3QKAA61NsBOuhpZk~FDxImMdmtALN2RVskiM441PiKIybLLgBo2Wmnsta1~iRWFTHbJ~mLnsTYw7rDDvJSKONNWPQs0IuDCFQd5BtJiQezVZlRHhRmXEaigrTSSf4dYWN~MSnPPtG7bRPQAhyNzqQnMDa7h4hvOD0NUkF1lqsg5Ur62XUA__' }} // Замените на свою картинку
+                source={require('../assets/img/on/82b9644b81514c0dbad75971d64fe4870f51d57f.png')} // Замените на свою картинку
                 style={styles.image}
                 resizeMode="cover"
             />

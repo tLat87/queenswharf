@@ -46,7 +46,14 @@ const FirstScreen = ({ navigation }) => {
             }}>
                 Saved Spots:
             </Text>
-
+            {savedRestaurants.length === 0 && (
+                <Text style={{
+                    color: '#fff', fontSize: 28, fontFamily: 'Montserrat', marginBottom: 18,
+                    alignSelf: 'flex-start',
+                }}>
+                    No saved spots yet
+                </Text>
+            )}
             {/* Маппим список сохраненных ресторанов */}
             {savedRestaurants.map((restaurant, index) => (
                 <View

@@ -227,9 +227,7 @@ const ThirdScreen = ({ navigation }) => {
             </Text>
 
             <ImageBackground
-                source={{
-                    uri: 'https://s3-alpha-sig.figma.com/img/95c7/ffc3/74b9536c5a2309ba34dbf7728451f737?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=N8dP-D26j-rcqGtJRYhzRGtHz-5A3ntmUkr0ildOO5MKwC0AuJZnR8WEmLVrX6DCA0N-piSgYju2hYqPivtJ~uqWlDFwOnNPUlMetpwj7jt3gnbc9hG7LFVsbr-0XoKKSPu~9bYlRVi9irxOM-NX0Sl9OZ4pnvhxiY-cEXSbLBDt-Ropn9O53VbXXfS1k6tcfFVhz9KBVNI7xhMm08sURe9kWgKDvr3fNgjITzNJaW2157rgYY3hcL0YgU6DfiFy69bCVvE1MJiEf3Hp355N4~vGCAGL0GNfAHPc32XdhDFK9q7Dg2Tz4KAckwi00p~7o9O09tKcjTSJFKZfl3EhHQ__',
-                }}
+                source={require('../assets/img/tcfyvguhb/9f78ba31ed1f331246544d6e5ad2e055b56d739a.png')}
                 style={{
                     width: '100%',
                     borderColor: '#353535',
@@ -283,9 +281,8 @@ const ThirdScreen = ({ navigation }) => {
                 }}
             >
                 <ImageBackground
-                    source={{
-                        uri: 'https://s3-alpha-sig.figma.com/img/670f/74bc/682cae7c25295c8cca152f17c16e6817?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=LmAES7Y~kCRUYFx0qhZudd5kVP1sXr-bUQpeME7EnvIb0ZnswCqNabGQnNGm1gfQkbsmZSJCqSNRcpk9jghowIBCvyUnY8~0hjtE9Y8lU3oPdpooV8mf-Cbf~41JLBoT0SR1TkLYAZQfpE5hYoPK~lwDfur6PZkfj4XGsbBA4E-V8Ur21qebm7-2w0UoSZrGldh1EvW6t-Lr3qZVwAqiN45v~Qo6KOXBeEzIqIY3b1z03SvHH2Q26i3q83s3ZzI3S5bdjNGmWyg6AzS7QgTjkcTuDSxQ1n0NxNKr1mbsEJLZq9cRbFnckICoxsOsAV5DG7GDGRZgleBUsJXet2mO1w__',
-                    }}
+                    source={require('../assets/img/tcfyvguhb/95c7ffc374b9536c5a2309ba34dbf7728451f737.png')}
+
                     style={{
                         width: '48%',
                         borderColor: '#353535',
@@ -328,9 +325,8 @@ const ThirdScreen = ({ navigation }) => {
                 </ImageBackground>
 
                 <ImageBackground
-                    source={{
-                        uri: 'https://s3-alpha-sig.figma.com/img/9f78/ba31/ed1f331246544d6e5ad2e055b56d739a?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=dqysPpQS6R5xomTjKMDkang1mldfRFFYSNHEjTC7Zl-v-mxzClVTlh75iwuLL96oBVER3M42nl-37IqQw8v7VXdJvbbvWhEYP7LYSEDMSy4Y2KaRkALcTk0pDWvShoJ-BoFZElGP~upV-Jn6sNd-JNJGF9A~I8Hib3iGq84ED4LoqM3SEaRpYqA~qeF16w-gV9mhZQbB7FBQJiIxyN0vGK4KwAmKW-Uvl1~EFmHcZ88zI-FcKVrHDMOaWx1o-AJwdqKmMSOctdidxQ0xsPAoOGUiTfQ25vnNAYfArHiMJnJ67hliB0qs3KNToSo9MKP07scYcqe4giuME6zUCVLaVg__',
-                    }}
+                    source={require('../assets/img/tcfyvguhb/670f74bc682cae7c25295c8cca152f17c16e6817.png')}
+
                     style={{
                         width: '48%',
                         borderColor: '#353535',
@@ -374,9 +370,8 @@ const ThirdScreen = ({ navigation }) => {
             </View>
 
             <ImageBackground
-                source={{
-                    uri: 'https://s3-alpha-sig.figma.com/img/a0ed/bc66/45367ad8cef582298e7e53784846c816?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Z6thzeMGxeALqbW5IlcfHBcXkq1QVXetYqGyzP5gtAbt4XBN1A5ojiLRgxw8gT3I5NhfVmwk-zYUFEBuWvKx9rF5mRSE7UpARCr15vqwC7Qfeoi09ITdCksSg-Txxs-2hCE6PhvZImJ6B3rFop4MvcmrkU1Y1F9vLekEgWWVaFyrteWRmrPwq9Zf9vGaazftcLoUh~WbMcm~oUBUAzbXl6PHCxCbZyvhPhStFtctW~42uOv~NW65lkkgDytbbf42VW6-F3VSZxiHH54p6PQqqk0Kp9LprbEcN3N-5ZBJjZZMeMxm4YJ1RhuUBMHFNzE3WejYKeiJolUrEkh~SiyH-g__',
-                }}
+                source={require('../assets/img/tcfyvguhb/a0edbc6645367ad8cef582298e7e53784846c816.png')}
+
                 style={{
                     width: '100%',
                     borderColor: '#353535',
